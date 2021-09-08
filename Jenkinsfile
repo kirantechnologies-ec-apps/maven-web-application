@@ -11,6 +11,7 @@ node ('master')
   {
   sh "${mavenHome}/bin/mvn clean package"
   }
+  /*
   stage ('ExcuteSonarQubeReport')
   {
    sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -35,4 +36,5 @@ node ('master')
     9866887476..
     ''', cc: 'kiranberi07@gmail.com', from: '', replyTo: '', subject: 'Build Over', to: 'kiranberi701@gmail.com'
   }
+  */
 }
