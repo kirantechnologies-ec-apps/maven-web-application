@@ -3,7 +3,7 @@ node ('master')
   def mavenHome = tool name: "maven 3.8.2"
   properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
   
-  stage ('CheckOutCode')
+  stage ('CheckCode')
   {
     git branch: 'development', credentialsId: '815e2b99-7f93-4b5f-90f9-e5f5df8296a8', url: 'https://github.com/kirantechnologies-ec-apps/maven-web-application.git'
   }
